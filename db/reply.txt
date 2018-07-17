@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "content": "测试回复",
+    "ct": "2018-03-06 22:20:27",
+    "ut": "2018-03-06 22:20:27",
+    "user_id": 1,
+    "topic_id": 1,
+    "username": "zhangzizheng",
+    "topic_title": "测试"
+  },
+  {
+    "id": 2,
+    "content": "测试回复2",
+    "ct": "2018-03-06 22:23:06",
+    "ut": "2018-03-06 22:23:06",
+    "user_id": 1,
+    "topic_id": 1,
+    "username": "zhangzizheng",
+    "topic_title": "测试"
+  }
+]

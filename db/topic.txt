@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "views": 10,
+    "reply": 2,
+    "title": "测试",
+    "content": "测试",
+    "ct": "2018-03-06 22:20:17",
+    "ut": "2018-03-06 22:20:17",
+    "user_id": 1,
+    "board_id": 1,
+    "username": "zhangzizheng",
+    "reply_username": "zhangzizheng",
+    "reply_id": 1
+  },
+  {
+    "id": 2,
+    "views": 1,
+    "reply": 0,
+    "title": "测试2",
+    "content": "测试2 ",
+    "ct": "2018-03-06 22:24:13",
+    "ut": "2018-03-06 22:24:13",
+    "user_id": 1,
+    "board_id": 1,
+    "username": "zhangzizheng",
+    "reply_username": "",
+    "reply_id": 1
+  },
+  {
+    "id": 3,
+    "views": 0,
+    "reply": 0,
+    "title": "测试3",
+    "content": "测试3",
+    "ct": "2018-03-06 22:24:24",
+    "ut": "2018-03-06 22:24:24",
+    "user_id": 1,
+    "board_id": 1,
+    "username": "zhangzizheng",
+    "reply_username": "",
+    "reply_id": 1
+  },
+  {
+    "id": 4,
+    "views": 1,
+    "reply": 0,
+    "title": "测试2",
+    "content": "",
+    "ct": "2018-03-06 22:24:33",
+    "ut": "2018-03-06 22:24:33",
+    "user_id": 1,
+    "board_id": 1,
+    "username": "zhangzizheng",
+    "reply_username": "",
+    "reply_id": 1
+  },
+  {
+    "id": 5,
+    "views": 0,
+    "reply": 0,
+    "title": "测试555",
+    "content": "测试55555555",
+    "ct": "2018-07-02 20:03:46",
+    "ut": "2018-07-02 20:03:46",
+    "user_id": 1,
+    "board_id": 2,
+    "username": "张子正",
+    "reply_username": "",
+    "reply_id": 1
+  }
+]

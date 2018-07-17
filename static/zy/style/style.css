@@ -1,0 +1,93 @@
+body {
+    font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Noto Sans CJK SC,WenQuanYi Micro Hei,Arial,sans-serif;
+    text-align: center;
+}
+
+/* layout */
+
+.a-btn {
+    border: 2px solid orange;
+    font-size: 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 6px;
+    color: #000;
+    transition: all 0.3s ease;
+    margin-top: 6px;
+}
+
+.a-btn:hover {
+    background-color: #ee9572;
+    color: #fff;
+    transform: scale(1.2);
+}
+
+
+/* section */
+
+.about {
+    background: url(img/section1.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.demo {
+    background: url(img/section2.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.blog {
+    background: url(img/section3.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+
+/* about */
+
+.content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top:0;
+    margin: auto;
+    width: 500px;
+    height: 500px;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-20%)
+}
+
+#id-about-avatar {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+#id-about-avatar:hover {
+    transform: rotate(360deg) scale(1.2);
+
+}
+
+/* demo */
+
+.content > a {
+    display: block;
+}
+
+/* blog */
+
+.a-demo {
+    border: 2px solid #7A378B;
+}
+
+.a-demo:hover {
+    background-color: #7A378B;
+}

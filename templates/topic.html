@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>子正bbs</title>
+        <link rel="stylesheet" href="./static/topic/style/style.css">
+        <link rel="stylesheet" href="./static/public/font-awesome/css/font-awesome.css">
+        <script src="./static/public/jquery-3.2.1.min.js"></script>
+    </head>
+    <body>
+        <div class="head">
+            <div class="head-content">
+                <a class="head-left" href="/topic">
+                </a>
+                <span class="head-right">
+                    <a href="/" class="head-page">首页</a>
+                    {% if user.id === -1 %}
+                    <a href="/user#login" class="head-page">登陆</a>
+                    <a href="/user#register" class="head-page">注册</a>
+                    {% endif %}
+                    {% if user.id !== -1 %}
+                    <a href="/user/{{ user.id }}" class="head-page">{{ user.username }}</a>
+                    <a href="/user/logout" class="head-page">登出</a>
+                    {% endif %}
+                </span>
+                <span class="head-mid"></span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="wrapper">
+                <div class="right">
+                    <div class="user-page right-page">
+                        <div class="box">
+                            <img src="./static/topic/style/avatar.jpg" alt="" id="id-user-page-avatar">
+                            <p id="id-user-page-username">{{ user.username }}</p>
+                            <hr>
+                            <p id="id-user-page-note" class="size14 fade">{{ user.note }}</p>
+                            <hr>
+                            <a href="/user/{{ user.id }}" id="id-user-page-new" class="user-page-a">个人主页</a>
+                            <a href="/topic/new" id="id-user-page-edit" class="user-page-a">发表新主题</a>
+                            <a id="id-user-page-messege" class="user-page-a">没做</a>
+                        </div>
+                    </div>
+                    <div class="topics-hot right-page">
+                        <div class="box size14 text-left">
+                            <div class="cell">
+                                <span class="fade">热议主题</span>
+                            </div>
+                            {% for h in hotTopics %}
+                            <div class="cell">
+                                <span class="float-right hot-count">
+                                    <i class="fa fa-eye"></i>
+                                    <span>{{ h.views }}</span>
+                                </span>
+                                <a href="/topic/{{ h.id }}" class="cell-title size14 hot-title">{{ h.title}}</a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="main">
+                    <div class="topic">
+                        <a href="/topic?board=0" class="topic-page" data-id="0">全部</a>
+                        <a href="/topic?board=1" class="topic-page" data-id="1">生活</a>
+                        <a href="/topic?board=2" class="topic-page" data-id="2">技术</a>
+                    </div>
+                    <div class="inner">
+                        {%  for t in topics %}
+                        <div class="cell">
+                            <div class="cell-wrapper">
+                                <span class="cell-avatar">
+                                    <img src="./static/topic/style/avatar.jpg" alt="头像" class="img-avatar">
+                                </span>
+                                <span class="cell-count">
+                                    <div class="count-comment text-left count">
+                                        <i class="fa fa-comment"></i>
+                                        <span>{{ t.reply }}</span>
+                                    </div>
+                                    <div class="count-browse text-left count">
+                                        <i class="fa fa-eye"></i>
+                                        <span>{{ t.views }}</span>
+                                    </div>
+                                </span>
+                                <span class="cell-content">
+                                    <div class="cell-content-title">
+                                        <a href="/topic/{{ t.id }}" class="cell-title">{{ t.title }}</a>
+                                    </div>
+                                    <div class="sep5"></div>
+                                    <div class="cell-content-">
+                                        <a href="/user/{{t.user_id}}" class="small blod">{{ t.username }}</a>
+                                        <span class="fade small">发表于{{ t.ct }}</span>
+                                        {% if t.reply_username !== '' %}
+                                        <span class="fade small">最后回复来自于</span>
+                                        <a href="/user/{{t.reply_id}}" class="small blod">{{ t.reply_username }}</a>
+                                        {% else %}
+                                        <span class="fade small">还没有人回复</span>
+                                        {% endif %}
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                        {%  endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="step20"></div>
+        <div class="foot">
+            <p> 个人学习项目, 本站已有 {{ users.length }} 人注册</p>
+        </div>
+        <script src="./static/topic/app.js"></script>
+    </body>
+</html>

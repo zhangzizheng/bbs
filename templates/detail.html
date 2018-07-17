@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ topic.title }}</title>
+        <link rel="stylesheet" href="../static/topic/style/style.css">
+        <link rel="stylesheet" href="../static/public/font-awesome/css/font-awesome.min.css">
+        <script src="../static/public/jquery-3.2.1.min.js"></script>
+        <link href="../static/public/atom-highlight.css" rel="stylesheet">
+        <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+        <script >hljs.initHighlightingOnLoad();</script>
+    </head>
+    <body>
+        <div class="head">
+            <div class="head-content">
+                <a class="head-left" href="/topic">
+                    <img src="../static/topic/style/logo.png" alt="" class="logo">
+                </a>
+                <span class="head-right">
+                    <a href="/" class="head-page">首页</a>
+                    {% if user.id === -1 %}
+                    <a href="/user#login" class="head-page">登陆</a>
+                    <a href="/user#register" class="head-page">注册</a>
+                    {% endif %}
+                    {% if user.id !== -1 %}
+                    <a href="/user/{{ user.id }}" class="head-page">{{ user.username }}</a>
+                    <a href="/user/logout" class="head-page">登出</a>
+                    {% endif %}
+                </span>
+                <span class="head-mid"></span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="wrapper">
+                <div class="right">
+                    <div class="user-page right-page">
+                        <div class="box">
+                            <img src="../static/topic/style/avatar.jpg" alt="" id="id-user-page-avatar">
+                            <p id="id-user-page-username">{{ user.username }}</p>
+                            <hr>
+                            <p id="id-user-page-note" class="size14 fade">{{ user.note }}</p>
+                            <hr>
+                            <a href="/user/16" id="id-user-page-new" class="user-page-a">个人主页</a>
+                            <a href="/topic/new" id="id-user-page-edit" class="user-page-a">发表新主题</a>
+                            <a id="id-user-page-messege" class="user-page-a">即将上线</a>
+                        </div>
+                    </div>
+                    <div class="topics-hot right-page">
+                        <div class="box size14 text-left">
+                            <div class="cell">
+                                <span class="fade">热议主题</span>
+                            </div>
+                            {% for h in hotTopics %}
+                            <div class="cell">
+                                <span class="float-right hot-count">
+                                    <i class="fa fa-eye"></i>
+                                    <span>{{ h.views }}</span>
+                                </span>
+                                <a href="/topic/{{ h.id }}" class="cell-title size12 hot-title">{{ h.title }}</a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="main">
+                    <div class="detail-main shadow">
+                        <div class="topic">
+                            <a href="/topic">子正</a>
+                            <span class="small"> > 文章详情</span>
+                        </div>
+                        <div class="topic">
+                            <h2>{{ topic.title }}</h2>
+                        </div>
+                        <div class="topic">
+                            <img src="../static/topic/style/avatar.jpg" alt="头像" class="img-avatar">
+                            <a href="" class="small blod">{{ topic.username }}</a>
+                            <span class="fade small">发表于{{ topic.ct }}</span>
+                            <span class="fade small">{{ topic.views }} 次点击</span>
+                        </div>
+                        <div class="topic">
+                            {{ topic.content | safe }}
+                        </div>
+                    </div>
+                    <div class="step20"></div>
+                    <div class="reply-main shadow">
+                        <div class="topic size12">
+                            <span>有 {{ topic.reply}} 条回复</span>
+                        </div>
+                        {% for r in replys %}
+                        <div class="reply-cell">
+                            <div class="cell-box">
+                                <div class="reply-cell-avatar">
+                                    <img src="../static/topic/style/avatar.jpg" alt="头像" class="img-avatar reply-img">
+                                </div>
+                                <div class="reply-cell-main">
+                                    <div class="reply-cell-title">
+                                        <a href="/user/{{ r.user_id }}" class="size14">{{ r.username }}</a>
+                                        <span class="fade small">回复于 {{ r.ct }}</span>
+                                    </div>
+                                    <div class="reply-cell-content size14">
+                                        {{ r.content }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="step20"></div>
+                    <div class="reply-new shadow">
+                        <div class="topic size12">
+                            <span>发表回复</span>
+                            <span class="fade float-right prompt">非空</span>
+                            <span class="fade float-right prompt">100字</span>
+                        </div>
+                        <div class="topic">
+                            <textarea name="content" id="id-new-reply" placeholder="暂不支持图片上传功能"></textarea>
+                        </div>
+                        <div class="topic">
+                            <a class="post-console-a" id="id-a-clear">
+                                <i class="fa fa-eye"></i>
+                                <span>没做</span>
+                            </a>
+                            <a class="post-console-a float-right" id="id-a-post">
+                                <i class="fa fa-paper-plane"></i>
+                                <span id="id-span-post" class="prompt">发表回复</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="step20"></div>
+        <div class="foot">
+            <p> 个人学习项目, 本站已有 {{ users.length }} 人注册</p>
+        </div>
+        <script src="../static/topic/reply.js"></script>
+    </body>
+</html>

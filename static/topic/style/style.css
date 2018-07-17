@@ -1,0 +1,424 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #e2e2e2;
+    text-align: center;
+    font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+}
+
+/* layout */
+
+img {
+    max-width:100%;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+a:hover {
+    text-decoration: underline;
+    corlor: black;
+}
+
+.sep5 {
+    height: 5px;
+}
+
+.small {
+    font-size: 11px;
+}
+
+.blod {
+    font-weight:bold;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.size14 {
+    font-size: 14px !important;
+}
+
+.size13 {
+    font-size: 13px !important;
+    line-height: 19px;
+}
+
+.size12 {
+    font-size: 12px !important;
+}
+
+
+.float-right {
+    float: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+textarea {
+    resize: none;
+    outline: none;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px;
+    font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.step20 {
+    height: 20px;
+}
+
+.shadow {
+    border: 1px solid #e2e2e2;
+    box-shadow: 0px 1px 1px #8e8e8e;
+}
+
+.post-console-a {
+    border: 1px solid #000;
+    padding: 5px 8px;
+    font-size: 13px;
+}
+
+#id-a-post {
+    font-size: 13px;
+    line-height: 17px;
+}
+
+.post-console-a:hover {
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+}
+
+/* head */
+
+.head {
+    background-color: #fff;
+    height: 50px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.22);
+    min-width: 900px;
+}
+
+.head-content {
+    width: 80%;
+    height: 35px;
+    margin: 0px auto 0px auto;
+    padding: 10px;
+    font-size: 12px;
+    line-height: 150%;
+    text-align: left;
+}
+
+.logo {
+    height: 35px;
+}
+
+
+.head-right {
+    float: right;
+    padding: 6px 0px 6px 0px;
+    font-size: 15px;
+}
+
+.head-page {
+    font-size: 13px;
+    line-height: 14px;
+    padding: 5px 8px 5px 8px;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+/* content */
+
+.content {
+    min-width: 1200px;
+    margin-top: 20px;
+    min-height: 620px;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0px auto 0px auto;
+}
+
+.main {
+    margin-right: 340px;
+}
+
+.right {
+    float: right;
+    width: 300px;
+}
+
+.topic {
+    color: #000;
+    padding: 15px;
+    line-height: 150%;
+    text-align: left;
+    border-bottom: 1px solid #e2e2e2;
+    background-color: #fff;
+}
+
+.topic-page {
+    font-size: 13px;
+    line-height: 14px;
+    padding: 5px 8px 5px 8px;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+
+#id-topic-active {
+    color: #fff;
+    background-color: #000;
+}
+
+#id-topic-active:hover {
+    background-color: #000;
+    text-decoration: none;
+}
+
+.topic-page:hover {
+    background-color: #f5f5f5;
+    text-decoration: none;
+}
+
+.cell {
+    border-bottom: 1px solid #e2e2e2;
+    background-color: #fff;
+}
+
+.cell:hover {
+    background-color: #f9f9f9;
+}
+
+.cell-wrapper {
+    text-align: left;
+    padding: 10px;
+}
+
+.cell-wrapper > span {
+    display: inline-block;
+}
+
+.cell-avatar {
+    float: left;
+    margin-right: 10px;
+}
+
+.img-avatar {
+    width: 48px;
+    height: 48px;
+}
+
+
+.cell-title {
+    font-size: 16px;
+    line-height: 140%;
+    text-shadow: 0px 1px 0px #fff;
+    color: #778087;
+    word-wrap: break-word;
+    transition: all 0.2s;
+}
+
+.cell-title:hover {
+    color: black;
+}
+
+.fade {
+    color: #8e8e8e;
+}
+
+.fade::before {
+    content: '  •  ';
+}
+
+.cell-count {
+    float: right;
+    margin-left: 20px;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+.count {
+    width: 60px;
+    transform: translateY(50%);
+}
+
+.right-page {
+    width: 100%;
+    min-height: 300px;
+    border: 1px solid #e2e2e2;
+    background-color: #fff;
+    box-shadow: 0px 1px 1px #8e8e8e;
+    margin-bottom: 20px;
+}
+
+.box {
+    padding: 15px 10px 15px 10px;
+}
+
+.id-user-page-avatar {
+    width: 105px;
+    height: 105px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.id-user-page-username {
+    font-size: 18px;
+    color: #8e8e8e;
+}
+
+.box > hr {
+    margin-bottom: 20px;
+}
+
+.user-page-a {
+    padding: 5px 8px 5px 8px;
+    border: 1px solid #778087;
+    color: #778087;
+    transition: all 0.3s;
+}
+
+.user-page-a:hover {
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+}
+
+.box > div{
+    padding: 10px 0px 10px 0px;
+}
+
+.hot-title {
+    display: block;
+    margin-right: 45px;
+}
+
+.cell-count {
+    display: block;
+    width: 40px;
+}
+
+
+
+/* new */
+
+.new-main {
+    text-align: left;
+}
+
+#id-new-title {
+    width: 100%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.02);
+    outline: none;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px;
+    font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+#id-new-content {
+    width: 100%;
+    height: 300px;
+}
+
+#id-new-reply {
+    height: 180px;
+    width: 100%;
+}
+
+
+
+.reply-cell {
+    padding: 5px;
+    line-height: 150%;
+    text-align: left;
+    border-bottom: 1px solid #e2e2e2;
+    background-color: #fff;
+}
+
+.box-cell {
+    padding: 5px;
+    min-height: 60px;
+}
+
+.reply-cell-avatar {
+    float: left;
+    width: 60px;
+}
+
+.reply-cell-main {
+    min-height: 50px;
+}
+
+.reply-img {
+    position: relative;
+    margin: 0 auto 0 auto;
+    border-radius: 50%;
+}
+
+.foot {
+    border-top: 1px solid rgba(0, 0, 0, 0.22);
+    background-color: #fff;
+    text-align: center;
+    color: #999;
+    padding: 0px 10px 0px 10px;
+}
+
+
+/* member */
+
+.member-head {
+    width: 100%;
+    height: 300px;
+    background-color: white;
+}
+
+.member-box {
+    height: 150px;
+}
+
+.member-head-top {
+    background-color: #00FF7F	;
+}
+
+.member-head-bottom {
+    background: white;
+}
+
+.member-head-content {
+    margin-left: 23%;
+}
+
+.member-count {
+    font-size: 18px;
+}
+
+.member-head-avatar > img {
+    position: absolute;
+    width: 180px;
+    left: 11%;
+    top: 29%;
+}
+
+.member-main {
+    min-height: 300px;
+}
+
+.member-right {
+    min-height: 200px;
+}
+
