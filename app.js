@@ -80,7 +80,7 @@ const run = (port=5000, host='') => {
 }
 
 if (require.main === module) {
-    const port = 5000
+    const port = 80
     // host 参数指定为 '0.0.0.0' 可以让别的机器访问你的代码
     const host = '0.0.0.0'
     run(port, host)
